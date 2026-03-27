@@ -47,6 +47,39 @@ $env:OPENAI_API_KEY = "your-key"
 $env:OPENAI_MODEL = "gpt-4o-mini"
 ```
 
+## Use with LM Studio
+
+You can run this repository against a local LM Studio server using OpenAI-compatible settings.
+
+Recommended models:
+
+- Chat model: `google/gemma-3-4b`
+- Embedding model: `text-embedding-bge-m3-embeddings`
+
+### 1) Start LM Studio local server
+
+In LM Studio:
+
+- Download and load the models above.
+- Start the OpenAI-compatible local server (default endpoint is `http://127.0.0.1:1234/v1`).
+
+### 2) Configure this repo
+
+Set environment variables in PowerShell:
+
+```powershell
+$env:OPENAI_API_KEY = "lm-studio"
+$env:OPENAI_BASE_URL = "http://127.0.0.1:1234/v1"
+$env:OPENAI_MODEL = "google/gemma-3-4b"
+$env:OPENAI_EMBEDDING_MODEL = "text-embedding-bge-m3-embeddings"
+```
+
+Notes:
+
+- `OPENAI_API_KEY` can be any non-empty value for LM Studio.
+- You can also place the same keys in `local.settings.json` at the solution root or lesson project folder.
+- Environment variables take precedence over `local.settings.json`.
+
 ## Run a Lesson
 
 ```powershell
