@@ -1,0 +1,14 @@
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.nupkg
+*.snupkg
+
+# Local secrets and machine settings
+.env
+appsettings.Development.json
+local.settings.json
+**/local.settings.json
